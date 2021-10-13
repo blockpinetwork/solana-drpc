@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/lib/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.4/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/lib/umd/locale/en.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/http-vue-loader@1.4.2/src/httpVueLoader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_2862633_d7vhqjr0w7q.css">
+  <link rel="stylesheet" href="./fonts/font.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="header">
+        <div class="header-mask"></div>
+        <div class="header-banner"></div>
+        <div class="header-content">
+          <div class="header-left">
+            <img :src="window.coinLogo" class="coin-logo" alt="Coin Logo">
+            <!-- <div class="coin-name">{{window.coinName}}</div> -->
+            <div class="network">DRPC Mainnet-beta</div>
+            <div class="contact">
+              <a class="contact-item" href="https://twitter.com/RealBlockPI" target="_blank">
+                <i class="iconfont icon-twitter"></i>
+              </a>
+              <a class="contact-item" href="https://t.me/blockpidaily" target="_blank">
+                <i class="iconfont icon-telegram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="essential">
+            <div class="label fm-mi">
+              ENDPOINT:
+            </div>
+            <div class="value">
+              <span class="endpoint">{{endpoint}}</span>
+              <span
+                class="copy"
+                :class="{ disabled: copyText === 'copied' }"
+                @click="handleCopy"
+              >{{ copyText }}</span>
+            </div>
+          </div>
+          <div class="glabal-box">
+            <el-row :gutter="30">
+              <el-col :span="24" :sm="8">
+                <div class="content">
+                  <div class="title">Total Peers</div>
+                  <div class="value fm-el">{{formatNum(total_peers)}}</div>
+                </div>
+              </el-col>
+              <el-col :span="24" :sm="8">
+                <div class="content">
+                  <div class="title">Total RPC Backends</div>
+                  <div class="value fm-el">{{formatNum(total_rpc_backends)}}</div>
+                </div>
+              </el-col>
+              <el-col :span="24" :sm="8">
+                <div class="content">
+                  <div class="title">Total RPC Nodes</div>
+                  <div class="value fm-el">{{formatNum(total_rpc_nodes)}}</div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+          <div class="header-right">
+            <span class="power">Powered by</span>
+            <a href="https://chains.blockpi.io/#/">
+              <img class="logo" src="./img/logo.svg" alt="BlockPI Logo">
+            </a>
+          </div>
+        </div>
+      </div> 
+      <div class="main">
+        <div class="stat-info">
+          <div class="description fm-mi">
+            Live Requests Stats
+          </div>
+          <stat-chart :datas="requests" :total="total_request" :average="average_request"/>
+        </div>
+        <div class="stat-table">
+          <div class="description fm-mi">
+            Selected Backends 
+          </div>
+          <stat-table :datas="selectedData" />
+        </div>
+        <div class="stat-table">
+          <div class="description fm-mi">
+            All RPC Nodes Discovered
+          </div>
+          <stat-table :datas="tableData" :index-length="3" />
+        </div>
+      </div>
+      <custom-foot />
+    </div>
+  </div>
+  <script src="./js/config.js"></script>
+  <script src="./js/settings.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>

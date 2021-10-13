@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Electrolize";
+  src: url("./Electrolize-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Aldrich";
+  src: url("./Aldrich-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Michroma";
+  src: url("./Michroma.ttf") format("truetype");
+  font-weight: 500;
+}

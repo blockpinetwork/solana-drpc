@@ -1,0 +1,240 @@
+html, body {
+  background: #0f1218;
+  width: 100%;
+  height: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  max-width: 2560px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body * {
+  font-family: Aldrich, FontAwesome, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif !important;
+}
+#app .fm-el {
+  font-family: Electrolize !important;
+}
+#app .fm-mi {
+  font-family: Michroma !important;
+}
+.container {
+  width: 100%;
+  margin: 0px auto;
+}
+.main {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0px auto;
+}
+.header {
+  width: 100%;
+  height: 630px;
+  position: relative;
+}
+@media screen and (min-width: 1920px){
+  .header {
+    height: 700px;
+  }
+}
+.header-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  background: url('../img/banner-mask.png') no-repeat center top;
+  background-size: cover;
+}
+.header-banner {
+  z-index: 2;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  background: url('../img/banner.jpg') no-repeat center top ;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
+.header-content {
+  position: relative;
+  z-index: 4;
+  padding-bottom: 20px;
+  max-width: 1220px;
+  height: 100%;
+  padding: 0 10px;
+  margin: 0px auto;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.header .header-left{
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: 14px;
+}
+.header-left .coin-logo {
+  width: 167px;
+  height: 20px;
+}
+.header-left .coin-name {
+  margin: 0 20px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 32px;
+}
+.header-left .network {
+  margin-left: 24px;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 2px;
+	border: solid 1px #5d687c;
+}
+.header-left .contact {
+  margin-left: auto;
+}
+.header-left .contact .iconfont{
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 20px;
+  color: #00d18c;
+}
+.header .header-right{
+  margin-top: auto;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.header-right .logo {
+  width: 170px;
+  height: 35px;
+}
+.header-right .power {
+  display: inline-block;
+  padding: 8px 4px;
+  background: linear-gradient(to right,#9945ff, #00d18c) no-repeat left bottom;
+  background-size: 100% 1px;
+  margin-right: 25px;
+  color: #5d687c;
+}
+
+.essential {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 23px 33px;
+  color: #ffffff;
+  font-size: 30px;
+  background: url('../img/endpoint.png') no-repeat center;
+  background-size: 100%;
+}
+.essential .value {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #00d18c;
+}
+.essential .value .endpoint {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.essential .value .copy {
+  margin-left: 8px;
+  flex-shrink: 0;
+  color: #05030a;
+  background: #00d18c;
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.essential .value .copy.disabled {
+  cursor: default;
+}
+.glabal-box {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.glabal-box .content {
+  position: relative;
+  color: #b0b8c7;
+  padding: 40px 70px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-size: 100% 100%;
+}
+.glabal-box .content::after {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/trapezoid.png') no-repeat center;
+}
+.glabal-box .content::before {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glabal-box .el-col:nth-child(1) .content::before {
+  background: url('../img/peers.png') no-repeat 80% center;
+}
+.glabal-box .el-col:nth-child(2) .content {
+  top: 60px;
+}
+.glabal-box .el-col:nth-child(2) .content::before {
+  background: url('../img/backends.png') no-repeat 80% center;
+}
+.glabal-box .el-col:nth-child(2) .content::after {
+  transform: rotate(180deg);
+}
+.glabal-box .el-col:nth-child(3) .content::before {
+  background: url('../img/nodes.png') no-repeat 80% center;
+}
+.glabal-box .title {
+  position: relative;
+  z-index: 3;
+} 
+.glabal-box .value {
+  position: relative;
+  z-index: 3;
+  margin-top: 20px;
+  font-size: 30px;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px){
+  .header {
+    height: auto;
+  }
+  .essential {
+    background-size: auto 100%;
+  }
+  .glabal-box .el-col:nth-child(2) .content {
+    top: 0px;
+  }
+  .glabal-box .el-col:nth-child(2) .content::after {
+    transform: rotate(0deg);
+  }
+}
+
+.stat-info {
+  margin-bottom: 140px;
+}
+.stat-info .description{
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #ffffff;
+}
