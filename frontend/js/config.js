@@ -1,7 +1,7 @@
 /**
  * Axios Request BaseUrl
  */
-window.axiosBaseUrl = ''
+window.axiosBaseUrl =''
 
 /**
  * Set Title

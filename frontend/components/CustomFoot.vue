@@ -3,17 +3,24 @@
     <div class="foot-main">
       <div class="copyright">Copyright &copy; 2021 BlockPI labs. All rights reserved.</div>
       <div class="foot-right">
-        <div class="divide"></div>
-        <a class="contact" href="https://twitter.com/RealBlockPI" target="_blank">
-          <i class="iconfont icon-twitter"></i>
-        </a>
-        <a class="contact" href="https://t.me/blockpidaily" target="_blank">
-          <i class="iconfont icon-telegram"></i>
-        </a>
-        <div class="divide"></div>
-        <a class="mail" href="mailto:market@blockpi.io" target="_blank">
-          <i class="iconfont icon-email"></i> <span>market@blockpi.io</span>
-        </a>
+        <div class="part part-one">
+          <div class="divide"></div>
+          <a class="contact" href="https://twitter.com/RealBlockPI" target="_blank">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+          <a class="contact" href="https://t.me/blockpidaily" target="_blank">
+            <i class="iconfont icon-telegram"></i>
+          </a>
+          <a class="contact" href="https://discord.gg/xTvGVrGVZv" target="_blank">
+            <i class="iconfont icon-discord"></i>
+          </a>
+        </div>
+        <div class="part part-two">
+          <div class="divide"></div>
+          <a class="mail" href="mailto:market@blockpi.io" target="_blank">
+            <i class="iconfont icon-email"></i> <span>market@blockpi.io</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -57,6 +64,11 @@ module.exports = {
 }
 .foot-main .foot-right {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.foot-main .foot-right .part {
+  display: flex;
   align-items: center;
 }
 .foot-main .divide {
@@ -65,10 +77,15 @@ module.exports = {
 	background-color: #5d687c;
   margin: 0 30px;
 }
+.foot-main .contact {
+  margin-right: 20px;
+}
+.foot-main .contact:last-of-type {
+  margin-right: 0px;
+}
 .foot-main .contact .iconfont{
   cursor: pointer;
   font-size: 20px;
-  margin: 0 10px;
   color: #00d18c;
 }
 .foot-main .mail{
