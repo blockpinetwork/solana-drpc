@@ -19,6 +19,6 @@ window.coinName = 'Solana'
 window.coinLogo = './img/coin-logo.svg'
 
 /**
- * Set Solana's rpc url
+ * Set RPC-URL for using
  */
 window.solana_rpc_url = 'https://public-rpc.blockpi.io/http/solana'
