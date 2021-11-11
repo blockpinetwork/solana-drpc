@@ -195,19 +195,22 @@ body * {
   height: 100%;
 }
 .glabal-box .el-col:nth-child(1) .content::before {
-  background: url('../img/peers.png') no-repeat 80% center;
+  background: url('../img/solana-01.svg') no-repeat 80% center;
+  background-size: 52px 52px;
 }
 .glabal-box .el-col:nth-child(2) .content {
   top: 60px;
 }
 .glabal-box .el-col:nth-child(2) .content::before {
-  background: url('../img/backends.png') no-repeat 80% center;
+  background: url('../img/solana-02.svg') no-repeat 80% center;
+  background-size: 52px 52px;
 }
 .glabal-box .el-col:nth-child(2) .content::after {
   transform: rotate(180deg);
 }
 .glabal-box .el-col:nth-child(3) .content::before {
-  background: url('../img/nodes.png') no-repeat 80% center;
+  background: url('../img/solana-03.svg') no-repeat 80% center;
+  background-size: 52px 52px;
 }
 .glabal-box .title {
   position: relative;
